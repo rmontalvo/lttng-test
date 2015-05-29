@@ -1,6 +1,6 @@
 ﻿# Analysing lock contention with LTTNG
 
-A common performance problem found in concurrent applications implemented with locks is **contention**. When we face this kind of problems, tracing is a good technique that can help us to understand what is happening during the execution of our applications. In particular, TTNG is a great tracing tool since it allows recording and analysing events at multiple levels, easily providing us of a wide and consistent view of the system.
+A common performance problem found in concurrent applications implemented with locks is **contention**. When we face this kind of problems, tracing is a good technique that can help us to understand what is happening during the execution of our applications. In particular, TTNG is a great tracing tool since it allows recording and analysing events at multiple levels, easily providing us with a wide and consistent view of the system.
 
 ### A Concurrent LRU Cache
 
@@ -8,7 +8,7 @@ We are going to show a way to analyse contention in a small application: a concu
 
 The procedure is the following. First, we need to instrument our application, which means, writing (tracepoints) to trace the time wasted between lock requests and acquisitions. Second, set-up a LTTNG session and execute our test to record these traces. Finally we collect and analyse these traces to present our results.
 
-Our main goal is to show how simple is to use LTTNG to analyse non trivial performance problems in multi-threaded programming. For sake of explanation, we will present only important parts of our test. However, the complete source code can be found at the [repository](https://github.com/rmontalvo/lttng-test.git).
+Our main goal is to show how simple is to use LTTNG to analyse non trivial performance problems in multi-threaded programming. For sake of explanation, we will present only important parts of our test. However, the complete source code can be found in the [repository](https://github.com/rmontalvo/lttng-test.git).
 
 #### Custom tracepoints
 
