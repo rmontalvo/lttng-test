@@ -1,0 +1,49 @@
+TRACEPOINT_EVENT(
+	tl,
+	start_test,
+	TP_ARGS(
+		int, threads,
+		int, iters,
+		char*, lock
+	),
+	TP_FIELDS(
+		ctf_integer(int, threads, threads)
+		ctf_integer(int, iters, iters)
+		ctf_string(lock_type, lock)
+	)
+)
+
+TRACEPOINT_EVENT(
+	tl,
+	end_test,
+	TP_ARGS(
+		unsigned long, elapsed_time
+	),
+	TP_FIELDS(
+		ctf_integer(unsigned long, elapsed_time, elapsed_time)
+	)
+)
+
+TRACEPOINT_EVENT(
+	tl,
+	start_test_thread,
+	TP_ARGS(
+		int, tid
+	),
+	TP_FIELDS(
+		ctf_integer(int, tid, tid)
+	)
+)
+
+TRACEPOINT_EVENT(
+	tl,
+	end_test_thread,
+	TP_ARGS(
+		int, tid,
+		unsigned long, elapsed_time
+	),
+	TP_FIELDS(
+		ctf_integer(int, tid, tid)
+		ctf_integer(unsigned long, elapsed_time, elapsed_time)
+	)
+)
