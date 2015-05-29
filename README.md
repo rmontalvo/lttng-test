@@ -109,4 +109,4 @@ Now we are ready to collect results. To do this, we only need to write a small p
 
 ### About LTTNG
 
-Though our example is simple, it shows perfectly the possibilities of the LTTNG framework as a tool to analyse performance problems. For example, we can use it to analyse more complex problems in multi-threaded programming like False Sharing. We can take advantage of its integration with PERF's events to record and analyse cache misses.
+Though our example is simple, it shows perfectly the possibilities of the LTTNG framework as a tool to analyse performance problems. For example, we can use it to analyse more complex problems in multi-threaded programming like False Sharing. We can take advantage of its integration with Perf's events to record and analyse cache misses.
